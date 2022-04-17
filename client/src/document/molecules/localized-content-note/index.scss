@@ -1,0 +1,10 @@
+@use "sass:math";
+
+.localized-content-note {
+  border-left: 0;
+
+  &.inline {
+    margin: 0;
+    padding: 0.5rem 1rem;
+  }
+}

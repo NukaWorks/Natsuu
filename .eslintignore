@@ -1,0 +1,6 @@
+*.min.js
+client/build/
+dist/
+libs/
+client/public/service-worker.js
+client/public/

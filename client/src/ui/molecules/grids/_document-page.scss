@@ -1,0 +1,78 @@
+@use "../../vars" as *;
+
+.document-page {
+  .page-header,
+  .generic-loading,
+  .article-actions-container,
+  .localized-content-note,
+  .document-toc-container,
+  .main-content,
+  .sidebar,
+  .metadata {
+    display: flex;
+  }
+
+  .main-content,
+  .sidebar {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.article-wrapper {
+  display: flex;
+  max-width: var(--max-width);
+  margin: 0 auto;
+
+  .toc {
+    display: none;
+  }
+
+  @media screen and (min-width: $screen-md) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: 3rem;
+    padding-left: 1.5rem;
+    padding-right: 3rem;
+    grid-template-areas: "sidebar main";
+
+    .sidebar,
+    .toc,
+    .main-content {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      align-self: start;
+    }
+
+    .main-content {
+      grid-area: main;
+    }
+  }
+
+  @media screen and (min-width: $screen-lg) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2.5fr) minmax(0, 15rem);
+    gap: 3rem;
+    grid-template-areas: "sidebar main toc";
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    .toc {
+      display: block;
+      grid-area: toc;
+
+      .document-toc-container {
+        position: sticky;
+        top: 3rem;
+      }
+    }
+
+    .in-nav-toc {
+      display: none;
+    }
+  }
+}
