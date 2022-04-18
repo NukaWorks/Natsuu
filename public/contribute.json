@@ -1,0 +1,26 @@
+{
+  "name": "natsuu",
+  "description": "The next-gen app powering MDN Web Docs.",
+  "repository": {
+    "url": "https://github.com/NukaWorks/natsuu",
+    "license": "MPL-2.0",
+    "tests": "https://github.com/NukaWorks/natsuu/actions"
+  },
+  "participate": {
+    "home": "https://wiki.mozilla.org/MDN",
+    "docs": "https://github.com/NukaWorks/natsuu/blob/main/README.md",
+    "mailing-list": "https://discourse.mozilla.org/c/nukaworks",
+    "chat": {
+      "url": "https://chat.mozilla.org/#/room/#nukaworks:mozilla.org"
+    }
+  },
+  "bugs": {
+    "list": "https://github.com/NukaWorks/natsuu/issues",
+    "report": "https://github.com/NukaWorks/natsuu/issues/new"
+  },
+  "urls": {
+    "prod": "https://developer.mozilla.org/",
+    "stage": "https://developer.allizom.org/"
+  },
+  "keywords": ["react", "node", "scss", "typescript", "staticsite"]
+}

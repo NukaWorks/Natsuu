@@ -1,0 +1,39 @@
+@use "../../ui/vars" as *;
+
+.toolbar {
+  background: var(--background-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--elem-radius);
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font: var(--type-body-m);
+  box-shadow: var(--shadow-01);
+
+  &-first-row,
+  .edit-actions {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .button {
+    color: var(--text-color);
+    white-space: nowrap;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .toggle-show-flaws {
+    white-space: nowrap;
+  }
+
+  @media screen and (min-width: $screen-md) {
+    margin: 0 0 2rem 0;
+  }
+}

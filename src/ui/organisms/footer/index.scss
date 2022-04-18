@@ -1,0 +1,224 @@
+@use "../../vars" as *;
+
+.page-footer {
+  background-color: var(--background-secondary);
+  padding: (1rem * 2) 1rem;
+  position: relative;
+
+  &-grid {
+    margin: 0 auto;
+    max-width: 1440px;
+  }
+
+  &,
+  a {
+    color: var(--text-secondary);
+  }
+
+  &-logo-col {
+    p {
+      font: var(--type-body-s);
+      max-width: 55ch;
+    }
+  }
+
+  &-app-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &-app-dl {
+    display: block;
+    max-width: 130px;
+
+    svg,
+    img {
+      width: 100%;
+    }
+
+    &.is-ms {
+      max-width: 110px;
+    }
+  }
+
+  &-moz {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 2rem;
+
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-primary);
+  }
+
+  &-legal-text {
+    font: var(--type-body-s);
+    margin: 0;
+
+    a {
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.footer-moz {
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font: var(--type-body-s);
+  }
+
+  &-logo-link {
+    display: flex;
+  }
+
+  &-link {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.nukaworks-footer-logo {
+  display: block;
+  width: 50px;
+  margin-bottom: 0.5rem;
+}
+
+.social-icons {
+  display: flex;
+  margin-top: 0.5rem;
+  gap: 0.5rem;
+
+  li {
+    flex: 0 0 auto;
+  }
+
+  .icon {
+    display: block;
+  }
+}
+
+.footer-nav {
+  &-heading {
+    font: var(--type-title-s);
+    margin: 0 0 0.5rem 0;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &-item {
+    font: var(--type-body-m);
+  }
+}
+
+.page-footer {
+  &-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (min-width: $screen-sm) {
+  .page-footer {
+    &-grid {
+      display: grid;
+      gap: 2.5rem;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "logo  . "
+        "nav1  nav2"
+        "nav3  nav4"
+        "moz   moz"
+        "legal legal";
+    }
+
+    &-logo-col {
+      grid-area: logo;
+    }
+
+    &-nav-col-1 {
+      grid-area: nav1;
+    }
+
+    &-nav-col-2 {
+      grid-area: nav2;
+    }
+
+    &-nav-col-3 {
+      grid-area: nav3;
+    }
+
+    &-nav-col-4 {
+      grid-area: nav4;
+    }
+
+    &-app-col {
+      grid-area: app;
+    }
+
+    &-moz {
+      grid-area: moz;
+    }
+
+    &-legal {
+      grid-area: legal;
+    }
+
+    &-app-list {
+      flex-direction: row;
+    }
+
+    &-app-dl {
+      img,
+      svg {
+        height: 38px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $screen-md) {
+  .page-footer {
+    &-grid {
+      grid-template-columns: minmax(260px, 2fr) repeat(4, minmax(0, 1fr));
+      grid-template-areas:
+        "logo  nav1  nav2  nav3  nav4"
+        "moz   moz   moz   moz   moz"
+        "legal legal legal legal  . ";
+      gap: 1rem;
+    }
+
+    &-app-list {
+      flex-direction: column;
+    }
+
+    &-app-dl {
+      img,
+      svg {
+        height: auto;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $screen-xl) {
+  .page-footer {
+    &-grid {
+      gap: 2.5rem;
+    }
+  }
+}
